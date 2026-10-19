@@ -25,6 +25,8 @@
         <mapping clas="package ifc.ibirama.hibernetelara.entidades.Viatura" />
         <mapping clas="package ifc.ibirama.hibernetelara.entidades.StatusViatura" />
         <mapping clas="package ifc.ibirama.hibernetelara.entidades.Usuario" />
+        <mapping clas="package ifc.ibirama.hibernetelara.entidades.TelefoneContato" />
+        <mapping clas="package ifc.ibirama.hibernetelara.entidades.Patente" />
         
     </session-factory>
 </hibernate-configuration>
