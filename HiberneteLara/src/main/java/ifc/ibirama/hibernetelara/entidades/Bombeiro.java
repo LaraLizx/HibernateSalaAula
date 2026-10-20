@@ -38,6 +38,7 @@ public class Bombeiro {
     private String nome;
     @Column (name="bom_nomeGuerra", unique = true, nullable = false, length = 45)
     private String nomeGuerra;
+   
     @OneToOne(mappedBy = "bombeiro")
     private Usuario usuario;
     @OneToMany(mappedBy ="bombeiro")
@@ -45,7 +46,7 @@ public class Bombeiro {
     @ManyToMany
     @JoinTable (name="Bombeiro has Patente", joinColumns = @JoinColumn (name="bom_id"), inverseJoinColumns = @JoinColumn (name="pat_id"))
     private Set<Patente> patente = new HashSet<Patente>();
-            
+           
     public Bombeiro(){
     }
     
