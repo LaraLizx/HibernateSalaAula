@@ -32,13 +32,13 @@ public class Bombeiro {
     private Integer id;
     @Column(name="bom_cpf", length = 11, unique = true, nullable = false)
     private String cpf;
-    @Column (name="bom_dataNascimento", nullable = false)
+    @Column (name="bom_data_nascimento", nullable = false)
     private LocalDate dataNascimento;
-    @Column (name="bom_nome", nullable = false, length = 45)
+    @Column (name="bom_nome_completo", nullable = false, length = 45)
     private String nome;
-    @Column (name="bom_nomeGuerra", unique = true, nullable = false, length = 45)
+    @Column (name="bom_nome_guerra", unique = true, nullable = false, length = 45)
     private String nomeGuerra;
-   
+   /*
     @OneToOne(mappedBy = "bombeiro")
     private Usuario usuario;
     @OneToMany(mappedBy ="bombeiro")
@@ -46,7 +46,7 @@ public class Bombeiro {
     @ManyToMany
     @JoinTable (name="Bombeiro has Patente", joinColumns = @JoinColumn (name="bom_id"), inverseJoinColumns = @JoinColumn (name="pat_id"))
     private Set<Patente> patente = new HashSet<Patente>();
-           
+    */       
     public Bombeiro(){
     }
     
@@ -119,7 +119,7 @@ public class Bombeiro {
     public void setNomeGuerra(String nomeGuerra) {
         this.nomeGuerra = nomeGuerra;
     }
-
+/*
     public Usuario getUsuario() {
         return usuario;
     }
@@ -131,7 +131,7 @@ public class Bombeiro {
     public Set<Patente> getPatente() {
         return patente;
     }
-    
+    */
 
    
     @Override

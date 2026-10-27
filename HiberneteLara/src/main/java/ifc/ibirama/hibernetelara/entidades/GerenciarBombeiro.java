@@ -37,28 +37,5 @@ public class GerenciarBombeiro {
             transacao.rollback();
         }
         }
-        
-        
-        Bombeiro bombeiro = new Bombeiro();
-        bombeiro.setCpf ("12345678");
-        bombeiro.setDataNascimento (LocalDate.of(1990,2,2));
-        bombeiro.setNome("Siclano Filho");
-        bombeiro.setNomeGuerra("Silva");
-        
-        try{
-            transacao = sessao.beginTransaction();
-            
-            sessao.persist(bombeiro);
-            transacao.commit();
-            System.out.println("Bombeiro 'Salvo'");
-            sessao.close();
-            
-        }catch(Exception e){
-            if (transacao != null ) {
-                transacao.rollback();
-            }
-        }
-        
-        HibernateUtil.shutdown();
     }
 }

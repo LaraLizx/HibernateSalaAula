@@ -7,7 +7,7 @@
     <session-factory>
         <!-- Configurações do Banco de Dados (MySQL) -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Bombeiro</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sistemabombeiro</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
 
@@ -21,12 +21,13 @@
         <!-- Cria/Atualiza as tabelas automaticamente no banco -->
         <property name="hibernate.hbm2ddl.auto">update</property>
         
-        <mapping clas="package ifc.ibirama.hibernetelara.entidades.Bombeiro" />
-        <mapping clas="package ifc.ibirama.hibernetelara.entidades.Viatura" />
-        <mapping clas="package ifc.ibirama.hibernetelara.entidades.StatusViatura" />
-        <mapping clas="package ifc.ibirama.hibernetelara.entidades.Usuario" />
-        <mapping clas="package ifc.ibirama.hibernetelara.entidades.TelefoneContato" />
-        <mapping clas="package ifc.ibirama.hibernetelara.entidades.Patente" />
-        
+        <mapping class="ifc.ibirama.hibernetelara.entidades.Bombeiro" />
+        <!--
+        <mapping class="package ifc.ibirama.hibernetelara.entidades.Viatura" />
+        <mapping class="package ifc.ibirama.hibernetelara.entidades.StatusViatura" />
+        <mapping class="package ifc.ibirama.hibernetelara.entidades.Usuario" />
+        <mapping class="package ifc.ibirama.hibernetelara.entidades.TelefoneContato" />
+        <mapping class="package ifc.ibirama.hibernetelara.entidades.Patente" />
+        -->
     </session-factory>
 </hibernate-configuration>
