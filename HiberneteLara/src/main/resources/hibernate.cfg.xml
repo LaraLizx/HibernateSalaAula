@@ -22,10 +22,12 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         
         <mapping class="ifc.ibirama.hibernetelara.entidades.Bombeiro" />
+        <mapping class="package ifc.ibirama.hibernetelara.entidades.Usuario" />
+        
         <!--
         <mapping class="package ifc.ibirama.hibernetelara.entidades.Viatura" />
         <mapping class="package ifc.ibirama.hibernetelara.entidades.StatusViatura" />
-        <mapping class="package ifc.ibirama.hibernetelara.entidades.Usuario" />
+        
         <mapping class="package ifc.ibirama.hibernetelara.entidades.TelefoneContato" />
         <mapping class="package ifc.ibirama.hibernetelara.entidades.Patente" />
         -->

@@ -19,16 +19,26 @@ public class GerenciarBombeiro {
         Session sessao = HibernateUtil.getSessionFactory().openSession();
         
         System.out.println("conexão estabelecida");
+        
         Bombeiro bombeiro01 = new Bombeiro();
         bombeiro01.setCpf("00000000011");
         bombeiro01.setNome("Sicrano de Oliveira");
         bombeiro01.setNomeGuerra("Oliveira");
         bombeiro01.setDataNascimento(LocalDate.of(2000, Month.NOVEMBER, 12));
         
+        Usuario usuario01 = new Usuario();
+        usuario01.setLogin("beltrano.silva");
+        usuario01.setSenha("12345");
+        
+        bombeiro01.setUsuario(usuario01);
+        usuario01.setBombeiro(bombeiro01);
+        
         Transaction transacao = null;
         try{
             transacao = sessao.beginTransaction();
+            
             sessao.persist(bombeiro01);
+            sessao.persist(usuario01);
             transacao.commit();
             System.out.println("Bombeiro salvo");
             
