@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ifc.ibirama.hibernetelara.entidades;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,7 +40,8 @@ public class Bombeiro {
     @Column (name="bom_nome_guerra", unique = true, nullable = false, length = 45)
     private String nomeGuerra;
    
-    @OneToOne(mappedBy = "bombeiro")
+    @OneToOne(mappedBy = "Bombeiro", cascade = {CascadeType.ALL})
+    
     private Usuario usuario;
     /*
     @OneToMany(mappedBy ="bombeiro")
